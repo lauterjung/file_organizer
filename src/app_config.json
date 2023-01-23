@@ -1,0 +1,12 @@
+{
+    "origin_root_folder": "",
+    "destination_root_folder": "",
+    "intermediate_folder": true,
+    "file_type": [
+        ".hid",
+        ".fsa"
+    ],
+    "patterns_to_match": [
+        "[UD]\\d{6}"
+    ]
+}

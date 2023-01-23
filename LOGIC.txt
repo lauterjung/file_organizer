@@ -1,0 +1,14 @@
+Read config file
+Validate config file
+Create config object
+Check if folders exist
+Check if files exist
+
+Search for single destiny folders
+Register destiny folders
+Register errors
+
+Log errors and skip error files
+Move files
+
+Show completion message
