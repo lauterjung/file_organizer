@@ -40,6 +40,26 @@ class ConfigurationTests(unittest.TestCase):
 
         self.assertTrue(result)
 
+    def test_readJson_InvalidJson_RaisesException(self):
+        self.assertTrue(False)
+        
+    def test_readJson_ValidJson_Returns___(self):
+        self.assertTrue(False)
+
+    # def test_validateTextInput_InvalidDestinationRootFolder_RaisesException(self):
+    #     self.assertTrue(False)
+
+    # def test_validateTextInput_InvalidFileTypes_RaisesException(self):
+    #     self.assertTrue(False)
+
+    # def test_validateTextInput_InvalidMatchPatterns_RaisesException(self):
+    #     self.assertTrue(False)
+
+    # def test_validateTextInput_FileOk_ReturnsTrue(self):
+    #     self.assertTrue(False)
+
+    # def test_setFromJson_FileOk_SetsObjectProperties(self):
+    #     self.assertTrue(False)
 
 if __name__ == '__main__':
     unittest.main()
