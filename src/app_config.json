@@ -1,7 +1,7 @@
 {
     "origin_root_folder": "",
     "destination_root_folder": "",
-    "intermediate_folder": true,
+    "has_intermediate_folder": true,
     "file_type": [
         ".hid",
         ".fsa"

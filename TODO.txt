@@ -1,2 +1,2 @@
-rename tests
+tests > Exception to customException
 special cases: 2_, R_, ...
