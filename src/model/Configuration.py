@@ -1,3 +1,4 @@
+import json
 import os
 from exceptions.FileNotFound import FileNotFound
 
@@ -14,13 +15,18 @@ class Configuration:
         if (os.path.isfile(file_path)):
             return True
         else:
-            raise (FileNotFound)
+            raise FileNotFound
 
+    def read_json(self, filePath: str) -> dict:
+        data: dict  
+        
+        with open(filePath, 'r') as json_file:
+            data = json.load(json_file)
+        
+        return data
+
+    def validate_text_input(self, json_data: dict) -> bool:
+        return True
+    
     def set_from_json(self) -> None:
         return
-
-    def read_json(self, filePath: str) -> str:
-        return ""
-
-    def validate_text_input(self) -> bool:
-        return True

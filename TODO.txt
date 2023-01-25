@@ -1,2 +1,3 @@
 tests > Exception to customException
 special cases: 2_, R_, ...
+how to properly mock tests
