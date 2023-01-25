@@ -58,6 +58,7 @@ class ConfigurationTests(unittest.TestCase):
             self.configuration.read_json(self.FILE_PATH)
         
         self.assertEqual(context.exception.msg, "Expecting ':' delimiter")
+        # self.assertTrue("Expecting ':' delimiter" in str(context.exception))
 
     def test_readJson_ValidJson_ReturnsDict(self):
         file = open(self.FILE_PATH, "w")
@@ -69,6 +70,35 @@ class ConfigurationTests(unittest.TestCase):
         self.assertIsInstance(result, dict)
         self.assertEqual(result, self.VALID_JSON)
         
+    def test_validateJsonKeys_InvalidFirstKey_RaisesException(self):
+        json = self.VALID_JSON
+        json.pop("origin_root_folder")
+        
+        with self.assertRaises(Exception) as context:
+            self.configuration.validate_json_keys(json)
+        
+        self.assertEqual(context.exception.msg, 'Invalid keys. "origin_root_folder" not found.')
+        
+    def test_validateJsonKeys_InvalidSecondKey_RaisesException(self):
+        pass
+    
+    def test_validateJsonKeys_InvalidFirstAndSecondKey_RaisesException(self):
+        pass
+    
+    def test_validateJsonValues_A_B(self):
+        self.assertTrue(False)
+
+    # def test_validateTextInput_InvalidFileTypes_RaisesException(self):
+    #     self.assertTrue(False)
+
+    # def test_validateTextInput_InvalidMatchPatterns_RaisesException(self):
+    #     self.assertTrue(False)
+
+    # def test_validateTextInput_FileOk_ReturnsTrue(self):
+    #     self.assertTrue(False)
+
+    # def test_setFromJson_FileOk_SetsObjectProperties(self):
+    #     self.assertTrue(False)
 
 if __name__ == '__main__':
     unittest.main()

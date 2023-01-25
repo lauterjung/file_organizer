@@ -25,6 +25,9 @@ class Configuration:
         
         return data
 
+    def validate_json_keys(self, json_data: dict) -> bool:
+        return True
+    
     def validate_text_input(self, json_data: dict) -> bool:
         return True
     
